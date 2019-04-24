@@ -1,0 +1,22 @@
+{
+  "name": "babel-bug",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "buildWithCopy": "babel ./src --out-dir ./lib --copy-files --ignore ./src/**/*.spec.js",
+    "build": "npx babel ./src --out-dir ./lib --ignore ./src/**/*.spec.js",
+    "clean": "rimraf lib",
+    "prebuild": "npm run clean",
+    "prebuildWithCopy": "npm run clean"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "rimraf": "^2.6.3"
+  }
+}
